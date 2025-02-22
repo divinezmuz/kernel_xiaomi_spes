@@ -672,3 +672,15 @@ CONFIG_THINLTO=y
 
 # Uid_stats
 CONFIG_UID_SYS_STATS=y
+
+#KSU
+CONFIG_KSU=y
+
+#susFS
+CONFIG_KSU_SUSFS=y
+
+#Disable due to manual integration
+# CONFIG_KPROBES is not set
+# CONFIG_HAVE_KPROBES is not set
+# CONFIG_KPROBE_EVENTS is not set
+# CONFIG_KSU_SUSFS_SUS_SU is not set
