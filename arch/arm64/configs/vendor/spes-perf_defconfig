@@ -675,3 +675,6 @@ CONFIG_UID_SYS_STATS=y
 
 # Memory tweaks
 CONFIG_KSM=y
+
+# Usb (Rmnet)
+CONFIG_USB_F_GSI=y
