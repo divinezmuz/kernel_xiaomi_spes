@@ -1505,12 +1505,19 @@ struct task_struct {
 #else
 	ANDROID_KABI_RESERVE(7);
 #endif
+#ifdef CONFIG_KSU_SUSFS
+	ANDROID_KABI_USE(8, u64 susfs_last_fake_mnt_id);
+#else
 	ANDROID_KABI_RESERVE(8);
+#endif
 
 	/*
 	 * New fields for task_struct should be added above here, so that
 	 * they are included in the randomized portion of task_struct.
 	 */
+#if defined(CONFIG_KSU_SUSFS) && !defined(ANDROID_KABI_RESERVE)
+	u64 susfs_last_fake_mnt_id;
+#endif
 	randomized_struct_fields_end
 
 	/* CPU-specific state of this task: */

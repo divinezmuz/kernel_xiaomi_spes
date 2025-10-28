@@ -137,3 +137,12 @@ kernel/configs/android-*.cfg
 
 # vendor device tree directories
 arch/arm64/boot/dts/vendor/
+
+# Additional ignore patterns
+/out/
+/KernelSU/
+/KernelSU-Next/
+/susfs4ksu/
+*.log
+*.orig
+*.rej
